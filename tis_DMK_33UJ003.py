@@ -6,6 +6,11 @@ import os
 import numpy as np
 
 class Camera:
+    '''
+    Basic device adaptor for The Imaging Source DMK 33UJ003 USB 3.0 monochrome
+    industrial camera. Many more commands are available and have not been
+    implemented.
+    '''    
     def __init__(self,
                  name='tis_DMK_33UJ003',
                  verbose=True,
