@@ -5,6 +5,9 @@ Python device adaptor: The Imaging Source DMK 33UJ003 USB 3.0 monochrome industr
 - Install the GUI (End User Software, IC Capture - Image Acquisition). The version used here was "setup_iccapture_2.5.1557.4007.en_US.exe".
 - Check the camera with the GUI.
 - Try to run 'tis_DMK_33UJ003.py' (requires Python and numpy). It needs the DLL files "tisgrabber_x64.dll" and "TIS_UDSHL11_x64.dll" in the same directory to work (versions included here for convenience).
+
+![social_preview](https://github.com/amsikking/tis_DMK_33UJ003/blob/main/social_preview.png)
+
 ## Details:
 - See the '\_\_main__' block at the bottom of "tis_DMK_33UJ003.py" for some typical ways to interact with the camera.
 - The adaptor reveals a minimal API from the extensive TIS SDK.
