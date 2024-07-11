@@ -766,10 +766,10 @@ if __name__ == '__main__':
         if i == 0: imwrite('test3.tif', images, imagej=True)
         print("min image values: %s"%images.min(axis=(1, 2)))
         print("max image values: %s"%images.max(axis=(1, 2)))
-        for j in range(num_img):
-            if min(images.min(axis=(1, 2))) == 0:
-                blank_frames += 1
-                print('%d blank frames received...'%blank_frames)
+        n_blank = num_img - np.count_nonzero(images.max(axis=(1, 2)))
+        if n_blank > 0:
+            blank_frames += n_blank
+            print('%d blank frames received...'%n_blank)
     average_latency_ms = total_latency_ms / num_acquisitions
     print("\n -> total blank frames received = %i"%blank_frames)
     print(" -> average latency (ms) = %0.6f"%average_latency_ms)
